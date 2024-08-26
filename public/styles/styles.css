@@ -1,0 +1,134 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure consistent font and background styling */
+body {
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+        helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Add padding to prevent overlap with fixed header */
+}
+
+/* Style the header (where the title is placed) */
+.heading {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Optional: Add background color */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better separation */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    flex-grow: 1; /* Ensure the container grows to fill available space */
+    margin-top: 10px;
+}
+
+.selectElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.selectBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2f92bd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666aea;
+}
+
+.password {
+    text-align: center;
+    ;
+    color: white;
+}
+
+.password ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+    padding: 20px 0;  /* Adds padding to the footer */
+    background-color: #333; /* Optional: Add background color */
+}
+
+/* Media query for limiting viewport height */
+@media (max-height: 300px) {
+    body {
+        min-height: auto;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+
+    footer {
+        position: static;
+        margin-top: 30px;
+    }
+
+    button {
+        margin-bottom: 5px;
+    }
+
+    .password {
+        margin-top: 10px;
+    }
+}

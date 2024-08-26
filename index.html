@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Password Generator</title>
+    <link rel="stylesheet" href=".\public\styles\styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">My Password Generator</h1>
+    </header>    
+    <div>
+        <div class="selectElement">
+        <div class="selectBox">
+                <label for="chars-select">Amount of Chars/Word:</label>
+                <select id="chars-select" name="chars">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="selectBox">
+                <label for="numbers-select">Amount of Numbers:</label>
+                <select id="numbers-select" name="number">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>        
+            </div>
+        </div>
+
+        <p class="total">total </p>
+    </div>
+        
+    <div class="container">
+        <p class="password"></p>
+            <div class="input-wrapper"><label for="number">Enter no. of passwords:</label>
+
+                <input type="number" placeholder="Enter no. of passwords">
+            </div>
+            <div class="button-wrapper">
+                <button>Generate Passwords</button>
+            </div>
+    </div>
+
+    <footer>
+        <p>Made in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Copyright &copy; 2024 Alan Cruickshank.</p>
+        <script src="./index.js"></script>
+        <script type="module" src="./index.js"></script>
+    </footer>
+    
+</body>
+</html>
