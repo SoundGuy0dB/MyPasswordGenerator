@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Default input Variables
-    let wordsSelected = 2;
-    let charsSelected = 5;
+    let wordsSelected = 1;
+    let charsSelected = 10;
     let numbersSelected = 2;
 
     // Define Elements in the Document
