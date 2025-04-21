@@ -128,4 +128,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("Words: " + wordsSelected + " | Chars: " + charsSelected + " | Numbers: " + numbersSelected);
     });
+
+    // Await Enter/Return Key Press to Generate Passwords
+    input.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            const numPasswords = parseInt(input.value, 10) || 1;
+            const passwordList = generateList(numPasswords, wordsSelected, charsSelected, numbersSelected);
+
+            let passwordElement = document.querySelector('.password');
+
+            if (passwordElement) {
+                passwordElement.innerHTML = '';
+
+                const ul = document.createElement('ul');
+                passwordList.forEach(password => {
+                    const li = document.createElement('li');
+                    li.textContent = password;
+                    ul.appendChild(li);
+                });
+                passwordElement.appendChild(ul);
+            } else {
+                console.error("Password element not found.");
+            }
+        }
+    });
 });
+
